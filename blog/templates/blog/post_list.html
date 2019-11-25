@@ -9,20 +9,47 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Notable&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Marvel&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <div>
-        <h1><a href="/">Mi pequeño primer blog</a></h1>
+        <h1>Mi pequeño primer blog</h1>
     </div>
 
-    {% for post in posts %}
-    <div>
-        <p> publicado: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+    <div class="container">
+        <div class="row">
+            <div class="col ">
+                {% for post in posts %}
+                <div class="caja">
+
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                    <p> <b>publicado: {{ post.published_date }}</b></p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-    {% endfor %}
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Footer -->
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col mx-auto">
+                            <p class="copyright text-muted">Copyright &copy; Todos los derechos mas que reservados 2019</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
 </body>
 
 </html>

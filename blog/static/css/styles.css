@@ -1,3 +1,29 @@
-h2 {
-    color: yellow;
+body {
+    background-image: url(../img/patterns.png);
+}
+
+h1 {
+    text-align: center;
+    background-color: rgba(242, 214, 162, 0.651);
+    font-size: 52px;
+    font-family: 'Notable', sans-serif;
+    padding: 1%;
+}
+
+.caja h2 {
+    color: black;
+    font-family: 'Notable', sans-serif;
+}
+
+.caja p {
+    font-size: 1.5em;
+    font-family: 'Marvel', sans-serif;
+}
+
+.caja {
+    background-color: rgba(252, 236, 184, 0.76);
+    border-radius: 50px;
+    float: left;
+    margin: 5% 0 0 0%;
+    padding: 2%;
 }
